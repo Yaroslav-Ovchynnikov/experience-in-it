@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "b1f2e4df-dc9d-469a-9f72-122f5652d79d",
+		"name": "OVCHYNNIKOV YAROSLAV [HOMEWORK_10]_GO_IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new BOARD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=OVCHYNNIKOV YAROSLAV [HOMEWORK_10]_GO_IT&key={{myKey}}&token={{myToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "OVCHYNNIKOV YAROSLAV [HOMEWORK_10]_GO_IT"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a NEW LIST pos TOP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'name' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=LIST TOP HM10&idBoard=621272a7a0bf5a30cfe90f15&pos=top&key={{myKey}}&token={{myToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIST TOP HM10"
+						},
+						{
+							"key": "idBoard",
+							"value": "621272a7a0bf5a30cfe90f15"
+						},
+						{
+							"key": "pos",
+							"value": "top"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a NEW LIST pos BOTTOM",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'name' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");",
+							"});",
+							"pm.test(\"Verify 'pos' object type to be 'number'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pos).to.be.a(\"number\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=LIST BOTTOM HM10&idBoard=621272a7a0bf5a30cfe90f15&pos=bottom&key={{myKey}}&token={{myToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIST BOTTOM HM10"
+						},
+						{
+							"key": "idBoard",
+							"value": "621272a7a0bf5a30cfe90f15"
+						},
+						{
+							"key": "pos",
+							"value": "bottom"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List on a Board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/621272a7a0bf5a30cfe90f15/lists?key={{myKey}}&token={{myToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"621272a7a0bf5a30cfe90f15",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Archive or unarchive a list",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/6212340e08f7c843c40891fc/?key={{myKey}}&token={{myToken}}&closed=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						"6212340e08f7c843c40891fc",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "closed",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card [LIST TOP HM10]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'id' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=621274276beff8224b8d25fc&key={{myKey}}&token={{myToken}}&name=karto4ka_1&desc=Sozdannaya",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "621274276beff8224b8d25fc"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "name",
+							"value": "karto4ka_1"
+						},
+						{
+							"key": "desc",
+							"value": "Sozdannaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card [Нужно сделать]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'id' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=621272a7a0bf5a30cfe90f16&key={{myKey}}&token={{myToken}}&name=karto4ka_2&desc=Sozdannaya",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "621272a7a0bf5a30cfe90f16"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "name",
+							"value": "karto4ka_2"
+						},
+						{
+							"key": "desc",
+							"value": "Sozdannaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card [В процессе]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'id' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=621272a7a0bf5a30cfe90f17&key={{myKey}}&token={{myToken}}&name=karto4ka_3&desc=Sozdannaya",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "621272a7a0bf5a30cfe90f17"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "name",
+							"value": "karto4ka_3"
+						},
+						{
+							"key": "desc",
+							"value": "Sozdannaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card [Готово]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'id' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=621272a7a0bf5a30cfe90f18&key={{myKey}}&token={{myToken}}&name=karto4ka_4&desc=Sozdannaya",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "621272a7a0bf5a30cfe90f18"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "name",
+							"value": "karto4ka_4"
+						},
+						{
+							"key": "desc",
+							"value": "Sozdannaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card [LIST BOTTOM HM10]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"pm.test(\"Verify 'id' object type to be 'string'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=621274973e068b6177adfeb2&key={{myKey}}&token={{myToken}}&name=karto4ka_5&desc=Sozdannaya",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "621274973e068b6177adfeb2"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						},
+						{
+							"key": "name",
+							"value": "karto4ka_5"
+						},
+						{
+							"key": "desc",
+							"value": "Sozdannaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/621272a7a0bf5a30cfe90f15?name=[HW_10]OVCHYNNIKOV YAROSLAV&desc=Doska dlya HM_10&key={{myKey}}&token={{myToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"621272a7a0bf5a30cfe90f15"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "[HW_10]OVCHYNNIKOV YAROSLAV"
+						},
+						{
+							"key": "desc",
+							"value": "Doska dlya HM_10"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "myKey",
+			"value": "75314bbb225e7bb982b7b2edd83c281c",
+			"type": "string"
+		},
+		{
+			"key": "myToken",
+			"value": "de70c96633482c4bc7110f1c3e3d6e00a752228da517562409f3042da0a9a2a7",
+			"type": "string"
+		}
+	]
+}
