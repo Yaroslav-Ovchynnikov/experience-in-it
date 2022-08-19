@@ -12,12 +12,7 @@ ____
 4. Techniques test desging: Equivalent Class, Boundary Value Analysis, Pairwise Testing, AdHOC, Decision Table.
 
 ## Basic knowledge:
-<img alt="Postman" src="https://img.shields.io/badge/Postman-FFD700?logo=postman&logoColor=white">
-
-<h><img alt="HTTP" src="https://img.shields.io/badge/HTTP-HTTPS-006400&?labelColor=006400">
-<img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-1E90FF.svg?logo=android-studio&logoColor=white">
-<img alt="HTML" src="https://img.shields.io/badge/HTML-9400D3.svg?logo=html5&logoColor=white"> <img alt="CSS" src="https://img.shields.io/badge/CSS-0000FF.svg?logo=css3&logoColor=white">
-<img alt="Chrome DevTools" src="https://img.shields.io/badge/Google%20Chrome%20DevTools-800000.svg?logo=googlechrome&logoColor=white">
+<img alt="Postman" src="https://img.shields.io/badge/Postman-FFD700?logo=postman&logoColor=white"> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-HTTPS-006400&?labelColor=006400"> <img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-1E90FF.svg?logo=android-studio&logoColor=white"> <img alt="HTML" src="https://img.shields.io/badge/HTML-9400D3.svg?logo=html5&logoColor=white"> <img alt="CSS" src="https://img.shields.io/badge/CSS-0000FF.svg?logo=css3&logoColor=white"> <img alt="Chrome DevTools" src="https://img.shields.io/badge/Google%20Chrome%20DevTools-800000.svg?logo=googlechrome&logoColor=white">
 
 ___
 
