@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list>
+<person>
+<name>Станиславский Олег</name>
+<personalID>1994</personalID>
+<city>Киев</city>
+<adress>Пушиной</adress>
+<build>44/50</build>
+<flat>1</flat>
+<numberphone>+3800000003233</numberphone>
+<email>stanislavcky.oog@gmail.com</email>
+<skype>stanislavcky.ogg</skype>
+</person>
+<person2>
+<name>Боровский Александр></name>
+<personalID>1995</personalID>
+<city>Киев</city>
+<adress>Пушиной</adress>
+<build>44/50</build>
+<flat>2</flat>
+<numberphone>+380242424233</numberphone>
+<email>borovalex@gmail.com</email>
+<skype>borovalex</skype>
+</person2>
+<person3>
+<name>Масленников Иван</name>
+<personalID>2676</personalID>
+<city>Киев</city>
+<adress>Пушиной</adress>
+<build>44/50</build>
+<flat>100</flat>
+<numberphone>+3837826578353</numberphone>
+<email>masloiv@gmail.com</email>
+<skype>masloiv112</skype>
+</person3>
+<person4>
+<name>Безпаль Александр</name>
+<personalID>5726573</personalID>
+<city>Киев</city>
+<adress>Спортивная</adress>
+<build>1а</build>
+<flat>998</flat>
+<numberphone>+380535325333</numberphone>
+<email>bezpal@gmail.com</email>
+<skype>bezpal333</skype>
+</person4>
+</list>
