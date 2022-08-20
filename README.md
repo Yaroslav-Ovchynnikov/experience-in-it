@@ -18,7 +18,7 @@ ___
 
 ## 📄 Documentation:
 1. **Writing, testing, analysis and executing Documentation:**
-    - **[Test Cases](/Documentation/Test_Cases/)** | **[Check Lists](/Documentation/Check_Lists/Check_list%20Wallet%20project%20by%20GoIT%20Academy)** | **[User Cases](/Documentation/User_Cases/)**
+    - **[Test Cases](/Documentation/Test_Cases/)** | **[Check Lists](/Documentation/Check_Lists/)** | **[User Cases](/Documentation/User_Cases/)**
     - **[Bug Reports](/Documentation/Bug_Reports/)**  
     - **[Requirements](/Documentation/Analysing%20Requirements/)**
 2. **Database SQL:** 
